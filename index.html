@@ -2,9 +2,48 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport">
 	<title>DeityJS</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400" rel="stylesheet">
+	<link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-	test
+	<main class="main">
+		<div class="main-inner">
+			<h1>DeityJS</h1>
+			<p>A property generation tool for generative testing, powered by ES2015 generators.</p>
+
+			<ul class="no-bullet">
+				<li><a href>Introduction</a></li>
+				<li><a href>GitHub</a></li>
+				<li><a href>Docs</a></li>
+				<li><a href>Issues</a></li>
+			</ul>
+		</div>
+	</main>
+
+	<div class="sidebar">
+		<form id="deity-form">
+			<input type="text" name="generator-string" placeholder="number:1-5">
+			<button>Generate</button>
+		</form>
+
+		<ul id="output" class="no-bullet"></ul>
+
+		<div class="help-text">
+			<h2>Try it out above!</h2>
+			<p>Try one of the following:</p>
+
+			<ul>
+				<li><code>string</code></li>
+				<li><code>number:10-20</code></li>
+				<li><code>boolean:0.66</code></li>
+				<li><code>A-M</code></li>
+				<li><code>array:(A-M):(boolean):(3.5-13.5)</code></li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="dist/bundle.min.js"></script>
 </body>
 </html>
