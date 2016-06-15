@@ -8,9 +8,16 @@ window.deity = deity;
 
 const ul = document.getElementById('output');
 
-function pushNew(text) {
+function pushNew(result) {
+	console.log(result);
+	result = JSON.stringify(result, null, 2);
+
+	if (result.indexOf('{') === 0) {
+		result = '[object Object] (use browser console)';
+	}
+
 	const code = document.createElement('code');
-	code.textContent = text;
+	code.textContent = result;
 
 	const li = document.createElement('li');
 	li.insertBefore(code, null);
@@ -31,6 +38,5 @@ const input = document.querySelector('[name="generator-string"]');
 form.addEventListener('submit', function (e) {
 	e.preventDefault();
 
-	deity(input.value, { iterations: 10 }, (val) => pushNew(JSON.stringify(val)))
-		.then(() => pushDivider());
+	deity(input.value, { iterations: 10 }, pushNew).then(pushDivider);
 });
