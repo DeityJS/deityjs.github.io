@@ -67,8 +67,9 @@ h1 {
 .sidebar {
 	flex-grow: 1;
 	padding: 0 20px;
-	border-left: 2px #F7F3DC solid;
 	overflow: auto;
+	background: #403D31;
+	color: #F7F3DC;
 }
 
 form {
@@ -91,13 +92,12 @@ form button {
 
 	font-family: inherit;
 	font-size: inherit;
-
-	background-color: white;
-	color: #A66363;
 }
 
 form input, form button {
-	border: 1px #403D31 solid;
+	border: 0;
+	background-color: #23211B;
+	color: inherit;
 }
 
 ul.no-bullet {
