@@ -72,9 +72,13 @@ h1 {
 	color: #F7F3DC;
 }
 
+h2 {
+	margin-top: 2em;
+}
+
 form {
-	margin: 40px 0;
 	display: flex;
+	margin: 1.5em 0;
 }
 
 form input {
